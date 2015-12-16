@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Application width="1920" height="1080" scaleX="0.5" scaleY="0.5" fullScreen="true">
+	<MusicPlayer id="mp" url="img/2.mp3" pause="false" loop="true"></MusicPlayer>
+	<BitmapAsset id="questions_btn" url="img/questions_btn.png" />
+	<BitmapAsset id="MakeTrue_btn" url="img/MakeTrue.png"/>
+	<BitmapAsset id="ImgBg" url="img/ImgBack.png" />
+	<BitmapAsset id="rightIcon" url="img/ImgTrue.png" />
+	<BitmapAsset id="wrongIcon" url="img/ImgFalse.png" />
+	
+	<Script>
+	<![CDATA[
+		import com.zoolon.events.BroadcastCenter;
+		import com.zoolon.events.CustomEvent;
+		import flash.system.fscommand;
+		
+		BroadcastCenter.instance.addEventListener(CustomEvent.TYPE, eventHandler);
+		
+		function eventHandler(e:CustomEvent):void
+		{
+			switch(String(e.name))
+			{
+				case "quit":
+					fscommand('quit');
+					break;
+			}
+		}
+	]]>
+	</Script>
+	
+	<BasicCanvas width="1920" height="1080" backgroundColor="0x222222" backgroundAlpha="1">
+		<NavigationController id="nav" width="1920" height="1080">
+			<!-- 首页 -->
+			<ImageCanvas preload="true" url="img/open.jpg" width="1920" height="1080" id="1">
+				
+				<Button touchMode="true">
+					<ImageCanvas preload="true" url="img/open_btn.png" y="0" x="850" alpha="0.00005" />
+					<Click>
+						<CustomEvent name="quit" />
+					</Click>
+				</Button>
+				
+				
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+					<ImageCanvas preload="true" url="img/open_btn.png" x="880" y="300" />
+					<Click>
+						<NavigationEvent controllerId="nav" showIdx="1" effect="flyIn" />
+					</Click>
+				</Button>
+			</ImageCanvas>
+			<!-- 地图页 -->
+			<ImageCanvas preload="true" url="img/answer.jpg" width="1920" height="1080">
+				<ImageButton url="img/btn0.png" x="1600" y="10" effect="glow" touchMode="true" color="0xb4a189">
+					<Click>
+						<CustomEvent name="examFinish" />
+						<NavigationEvent controllerId="nav" showIdx="0" effect="flyOut" />
+					</Click>
+				</ImageButton>
+				<ImageCanvas id="line1" preload="true" url="img/line1.png" x="150" y="423" alpha="0" />
+				<ImageCanvas id="line2" preload="true" url="img/line2.png" x="385" y="525" alpha="0" />
+				<ImageCanvas id="line3" preload="true" url="img/line3.png" x="535" y="502" alpha="0" />
+				<ImageCanvas id="line4" preload="true" url="img/line4.png" x="711" y="335" alpha="0"/>
+				<ImageCanvas id="line5" preload="true" url="img/line5.png" x="885" y="407" alpha="0"/>
+				<ImageCanvas id="line6" preload="true" url="img/line6.png" x="940" y="695" alpha="0"/>
+				<ImageCanvas id="line7" preload="true" url="img/line7.png" x="1080" y="544" alpha="0"/>
+				<ImageCanvas id="line8" preload="true" url="img/line8.png" x="1250" y="537" alpha="0"/>
+				<ImageCanvas id="line9" preload="true" url="img/line9.png" x="1525" y="600" alpha="0"/>
+				
+				<ImageButton id="sbt0" source="questions_btn" x="99" y="375" effect="glow" touchMode="true">
+					<Click>
+						<CustomEvent name="showRandomExam" />
+					</Click>
+				</ImageButton>
+				<ImageButton id="sbt1" source="questions_btn" x="352" y="466" effect="glow" touchMode="true" mouseEnabled="false" alpha="0.3">
+					<Click>
+						<CustomEvent name="showRandomExam" />
+					</Click>
+				</ImageButton>
+				<ImageButton id="sbt2" source="questions_btn" x="471" y="692" effect="glow" touchMode="true" mouseEnabled="false" alpha="0.3">
+					<Click>
+						<CustomEvent name="showRandomExam" />
+					</Click>
+				</ImageButton>
+				<ImageButton id="sbt3" source="questions_btn" x="676" y="466" effect="glow" touchMode="true" mouseEnabled="false" alpha="0.3">
+					<Click>
+						<CustomEvent name="showRandomExam" />
+					</Click>
+				</ImageButton>
+				<ImageButton id="sbt4" source="questions_btn" x="959" y="346" effect="glow" touchMode="true" mouseEnabled="false" alpha="0.3">
+					<Click>
+						<CustomEvent name="showRandomExam" />
+					</Click>
+				</ImageButton>
+				<ImageButton id="sbt5" source="questions_btn" x="883" y="646" effect="glow" touchMode="true" mouseEnabled="false" alpha="0.3">
+					<Click>
+						<CustomEvent name="showRandomExam" />
+					</Click>
+				</ImageButton>
+				<ImageButton id="sbt6" source="questions_btn" x="1068" y="787" effect="glow" touchMode="true" mouseEnabled="false" alpha="0.3">
+					<Click>
+						<CustomEvent name="showRandomExam" />
+					</Click>
+				</ImageButton>
+				<ImageButton id="sbt7" source="questions_btn" x="1218" y="512" effect="glow" touchMode="true" mouseEnabled="false" alpha="0.3">
+					<Click>
+						<CustomEvent name="showRandomExam" />
+					</Click>
+				</ImageButton>
+				<ImageButton id="sbt8" source="questions_btn" x="1451" y="727" effect="glow" touchMode="true" mouseEnabled="false" alpha="0.3">
+					<Click>
+						<CustomEvent name="showRandomExam" />
+					</Click>
+				</ImageButton>
+				<ImageButton id="sbt9" source="questions_btn" x="1723" y="562" effect="glow" touchMode="true" mouseEnabled="false" alpha="0.3">
+					<Click>
+						<CustomEvent name="showRandomExam" />
+					</Click>
+				</ImageButton>
+				
+				<!-- icons -->
+				<BasicComponent id="r0" url="RightCP.zxml" x="144" y="340" visible="false" />
+				<BasicComponent id="r1" url="RightCP.zxml" x="397" y="431" visible="false" />
+				<BasicComponent id="r2" url="RightCP.zxml" x="516" y="657" visible="false" />
+				<BasicComponent id="r3" url="RightCP.zxml" x="721" y="431" visible="false" />
+				<BasicComponent id="r4" url="RightCP.zxml" x="1004" y="311" visible="false" />
+				<BasicComponent id="r5" url="RightCP.zxml" x="928" y="611" visible="false" />
+				<BasicComponent id="r6" url="RightCP.zxml" x="1112" y="752" visible="false" />
+				<BasicComponent id="r7" url="RightCP.zxml" x="1263" y="477" visible="false" />
+				<BasicComponent id="r8" url="RightCP.zxml" x="1496" y="692" visible="false" />
+				<BasicComponent id="r9" url="RightCP.zxml" x="1768" y="527" visible="false" />
+				
+				<BasicComponent id="w0" url="WrongCP.zxml" x="144" y="340" visible="false" />
+				<BasicComponent id="w1" url="WrongCP.zxml" x="397" y="431" visible="false" />
+				<BasicComponent id="w2" url="WrongCP.zxml" x="516" y="657" visible="false" />
+				<BasicComponent id="w3" url="WrongCP.zxml" x="721" y="431" visible="false" />
+				<BasicComponent id="w4" url="WrongCP.zxml" x="1004" y="311" visible="false" />
+				<BasicComponent id="w5" url="WrongCP.zxml" x="928" y="611" visible="false" />
+				<BasicComponent id="w6" url="WrongCP.zxml" x="1112" y="752" visible="false" />
+				<BasicComponent id="w7" url="WrongCP.zxml" x="1263" y="477" visible="false" />
+				<BasicComponent id="w8" url="WrongCP.zxml" x="1496" y="692" visible="false" />
+				<BasicComponent id="w9" url="WrongCP.zxml" x="1768" y="527" visible="false" />
+				
+				<BasicComponent url="Exam.zxml" />
+			</ImageCanvas>
+			
+			<!-- 结果页 -->
+			<ImageCanvas url="img/result.jpg" preload="true">
+				<Label id="resultLabel" text="99" size="100" textColor="0x440011" width="180" align="center" autoSize="none" x="905" y="348" />
+				<ImageButton url="img/back_btn.png" x="640" y="774" effect="glow" touchMode="true" color="0xb4a189">
+					<Click>
+						<CustomEvent name="examFinish" />
+						<NavigationEvent controllerId="nav" showIdx="0" effect="flyOut" />
+					</Click>
+				</ImageButton>
+				<ImageButton url="img/signa_btn.png" x="1040" y="774" effect="glow" touchMode="true" color="0xb4a189">
+					<Click>
+						<CustomEvent name="examFinish" />
+						<NavigationEvent controllerId="nav" showIdx="3" effect="flyOut" />
+					</Click>
+				</ImageButton>
+			</ImageCanvas>
+			
+			<!--签字页面-->
+			
+			<SwfCanvas preload="true" url="swf/Writer.swf" width="1920" height="1080">
+				<ImageButton url="img/btn0.png" x="1600" y="10" effect="glow" touchMode="true" color="0xb4a189">
+					<Click>
+						<CustomEvent name="examFinish" />
+						<NavigationEvent controllerId="nav" showIdx="2" effect="flyOut" />
+					</Click>
+				</ImageButton>
+			</SwfCanvas>
+		</NavigationController>
+	</BasicCanvas>
+	
+	<Events id="reset">
+		<CanvasControlEvent id="r0" action="set" visible="false" />
+		<CanvasControlEvent id="r1" action="set" visible="false" />
+		<CanvasControlEvent id="r2" action="set" visible="false" />
+		<CanvasControlEvent id="r3" action="set" visible="false" />
+		<CanvasControlEvent id="r4" action="set" visible="false" />
+		<CanvasControlEvent id="r5" action="set" visible="false" />
+		<CanvasControlEvent id="r6" action="set" visible="false" />
+		<CanvasControlEvent id="r7" action="set" visible="false" />
+		<CanvasControlEvent id="r8" action="set" visible="false" />
+		<CanvasControlEvent id="r9" action="set" visible="false" />
+		
+		<CanvasControlEvent id="w0" action="set" visible="false" />
+		<CanvasControlEvent id="w1" action="set" visible="false" />
+		<CanvasControlEvent id="w2" action="set" visible="false" />
+		<CanvasControlEvent id="w3" action="set" visible="false" />
+		<CanvasControlEvent id="w4" action="set" visible="false" />
+		<CanvasControlEvent id="w5" action="set" visible="false" />
+		<CanvasControlEvent id="w6" action="set" visible="false" />
+		<CanvasControlEvent id="w7" action="set" visible="false" />
+		<CanvasControlEvent id="w8" action="set" visible="false" />
+		<CanvasControlEvent id="w9" action="set" visible="false" />
+		
+		<CanvasControlEvent id="line1" action="set" alpha="0" />
+		<CanvasControlEvent id="line2" action="set" alpha="0" />
+		<CanvasControlEvent id="line3" action="set" alpha="0" />
+		<CanvasControlEvent id="line4" action="set" alpha="0" />
+		<CanvasControlEvent id="line5" action="set" alpha="0" />
+		<CanvasControlEvent id="line6" action="set" alpha="0" />
+		<CanvasControlEvent id="line7" action="set" alpha="0" />
+		<CanvasControlEvent id="line8" action="set" alpha="0" />
+		<CanvasControlEvent id="line9" action="set" alpha="0" />
+		
+		<CanvasControlEvent id="sbt0" action="set" alpha="1" mouseEnabled="true" />
+		<CanvasControlEvent id="sbt1" action="set" alpha="0.3" mouseEnabled="false" />
+		<CanvasControlEvent id="sbt2" action="set" alpha="0.3" mouseEnabled="false" />
+		<CanvasControlEvent id="sbt3" action="set" alpha="0.3" mouseEnabled="false" />
+		<CanvasControlEvent id="sbt4" action="set" alpha="0.3" mouseEnabled="false" />
+		<CanvasControlEvent id="sbt5" action="set" alpha="0.3" mouseEnabled="false" />
+		<CanvasControlEvent id="sbt6" action="set" alpha="0.3" mouseEnabled="false" />
+		<CanvasControlEvent id="sbt7" action="set" alpha="0.3" mouseEnabled="false" />
+		<CanvasControlEvent id="sbt8" action="set" alpha="0.3" mouseEnabled="false" />
+		<CanvasControlEvent id="sbt9" action="set" alpha="0.3" mouseEnabled="false" />
+	</Events>
+</Application>

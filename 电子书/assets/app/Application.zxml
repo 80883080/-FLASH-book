@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Application width="1920" height="1080" scaleX="0.5" scaleY="0.5" fullScreen="true">
+	<Script>
+		<![CDATA[
+			import com.zoolon.core.CoreInfo;
+			import com.zoolon.events.BroadcastCenter;
+			import flash.display.Stage;
+			import flash.events.KeyboardEvent;
+			import com.zoolon.events.CustomEvent;
+			import flash.system.fscommand;
+			
+			BroadcastCenter.instance.addEventListener(CustomEvent.TYPE, eventHandler);
+			
+			function eventHandler(e:CustomEvent):void
+			{
+				switch(String(e.name))
+				{
+					case "quit":
+						fscommand('quit');
+						break;
+				}
+			}
+			
+			var stage:Stage = CoreInfo.app.stage;
+			stage.addEventListener(KeyboardEvent.KEY_UP,keyUpHandler);
+			
+			function keyUpHandler(e:KeyboardEvent):void
+			{
+				switch(e.keyCode)
+				{
+					case 65: //a
+					BroadcastCenter.sendEvent(XMLList("<events><FlipBookEvent id='fb' go='prev' /></events>"));
+					break;
+					case 66: //b
+					BroadcastCenter.sendEvent(XMLList("<events><FlipBookEvent id='fb' go='next' /></events>"));
+					break;
+				}
+			}
+		]]>
+	</Script>
+	<MusicPlayer id="mp" url="img/1.mp3" pause="false" loop="true"></MusicPlayer>
+	<ImageCanvas preload="true" url="img/book1.jpg" width="960" height="1080">
+		
+		<Button touchMode="true">
+			<ImageCanvas preload="true" url="img/open.png" y="0" x="400" alpha="0.0001" />
+			<Click>
+				<CustomEvent name="quit" />
+			</Click>
+		</Button>
+		
+	</ImageCanvas>
+	<ImageCanvas preload="true" url="img/background.jpg"  width="960" height="1080" x="960">
+		<Button effect="glow" color="0xb4a189"  touchMode="true">
+			<ImageCanvas preload="true" url="img/back_menu.png" x="600" y="1000"/>
+				<Click>
+					<FlipBookEvent id="fb" go="2" /> 
+				</Click>
+		</Button>
+	</ImageCanvas>
+	<FlipBook id="fb" width="960" height="1080" x="960">
+		<Pages>
+			<BasicCanvas>
+				<Button touchMode="true">
+					<ImageCanvas preload="true" url="img/book2.jpg"/>
+						<Click>
+							<FlipBookEvent id="fb" go="2" /> 
+						</Click>
+				</Button>
+			</BasicCanvas>
+			<BasicCanvas>
+				<ImageCanvas preload="true" url="img/0.jpg"></ImageCanvas>
+				<Button effect="glow" color="0xb4a189" touchMode="true">
+					<ImageCanvas preload="true" url="img/menu_left1.png" y="250" x="367" />
+					<Click>
+						<FlipBookEvent id="fb" go="28" /> 
+					</Click>
+				</Button>
+				<Button effect="glow" color="0xb4a189" touchMode="true">
+					<ImageCanvas preload="true" url="img/menu_left2.png" y="250" x="446" />
+					<Click>
+						<FlipBookEvent id="fb" go="26" /> 
+					</Click>
+				</Button>
+				<Button effect="glow" color="0xb4a189" touchMode="true">
+					<ImageCanvas preload="true" url="img/menu_left3.png" y="250" x="520" />
+					<Click>
+						<FlipBookEvent id="fb" go="24" /> 
+					</Click>
+				</Button>
+				<Button effect="glow" color="0xb4a189" touchMode="true">
+					<ImageCanvas preload="true" url="img/menu_left4.png" y="250" x="595" />
+					<Click>
+						<FlipBookEvent id="fb" go="22" /> 
+					</Click>
+				</Button>
+				<Button effect="glow" color="0xb4a189" touchMode="true">
+					<ImageCanvas preload="true" url="img/menu_left5.png" y="250" x="672" />
+					<Click>
+						<FlipBookEvent id="fb" go="20" /> 
+					</Click>
+				</Button>
+				<Button effect="glow" color="0xb4a189" touchMode="true">
+					<ImageCanvas preload="true" url="img/menu_left7.png" y="250" x="746" />
+					<Click>
+						<FlipBookEvent id="fb" go="18" /> 
+					</Click>
+				</Button>
+				<Button effect="glow" color="0xb4a189" touchMode="true">
+					<ImageCanvas preload="true" url="img/menu_left9.png" y="250" x="822" />
+					<Click>
+						<FlipBookEvent id="fb" go="16" /> 
+					</Click>
+				</Button>
+			</BasicCanvas>
+			<BasicCanvas>
+				<ImageCanvas preload="true" url="img/1.jpg">
+					<Button effect="glow" color="0xb4a189" touchMode="true">
+						<ImageCanvas preload="true" url="img/menu1.png" y="210" x="577" />
+						<Click>
+							<FlipBookEvent id="fb" go="4" /> 
+						</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189" touchMode="true">
+						<ImageCanvas preload="true" url="img/menu2.png" y="210" x="490" />
+						<Click>
+							<FlipBookEvent id="fb" go="6" /> 
+						</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189" touchMode="true">
+						<ImageCanvas preload="true" url="img/menu3.png" y="210" x="397" />
+						<Click>
+							<FlipBookEvent id="fb" go="8" /> 
+						</Click>
+					</Button>	
+					<Button effect="glow" color="0xb4a189" touchMode="true">
+						<ImageCanvas preload="true" url="img/menu4.png" y="210" x="308" />
+						<Click>
+							<FlipBookEvent id="fb" go="10" /> 
+						</Click>
+					</Button>	
+					<Button effect="glow" color="0xb4a189" touchMode="true">
+						<ImageCanvas preload="true" url="img/menu5.png" y="210" x="216" />
+						<Click>
+							<FlipBookEvent id="fb" go="12" /> 
+						</Click>
+					</Button>	
+					<Button effect="glow" color="0xb4a189" touchMode="true">
+						<ImageCanvas preload="true" url="img/menu6.png" y="210" x="127" />
+						<Click>
+							<FlipBookEvent id="fb" go="14" /> 
+						</Click>
+					</Button>	
+					<Button effect="glow" color="0xb4a189" touchMode="true">
+						<ImageCanvas preload="true" url="img/menu7.png" y="210" x="40" />
+						<Click>
+							<FlipBookEvent id="fb" go="16" /> 
+						</Click>
+					</Button>	
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+				<ImageCanvas preload="true" url="img/2.jpg">
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+				<ImageCanvas preload="true" url="img/3.jpg">
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/4.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/5.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/6.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/7.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/8.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/9.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/10.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/11.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/12.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/13.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/14.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/15.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/16.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/17.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/18.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/19.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/20.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/21.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/22.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/23.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/24.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/25.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/26.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/27.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/28.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/back_menu.png" x="100" y="1000"/>
+							<Click>
+								<FlipBookEvent id="fb" go="2" /> 
+							</Click>
+					</Button>
+					<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/prev.png" x="850" y="980"/>
+							<Click>
+								<FlipBookEvent id="fb" go="prev" /> 
+							</Click>
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+			<ImageCanvas preload="true" url="img/29.jpg">
+				<Button effect="glow" color="0xb4a189"  touchMode="true">
+						<ImageCanvas preload="true" url="img/next.png" x="70" y="980"/>
+						<Click>
+							<FlipBookEvent id="fb" go="next" /> 
+						</Click>	
+					</Button>
+				</ImageCanvas>
+			</BasicCanvas>
+			<BasicCanvas>
+				<ImageCanvas preload="true" url="img/book1.jpg"></ImageCanvas>
+			</BasicCanvas>
+		</Pages>
+	</FlipBook>
+</Application>

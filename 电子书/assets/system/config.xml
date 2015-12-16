@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- FlashPlayer 11.4 -->
+	<version>c67a</version>
+	<!-- 设置连接方式
+		 0:LocalConnection[本地连接]
+		 1:socket[socket连接]
+	-->
+	<net>
+		<remoteEnable option="0">false</remoteEnable>
+	</net>
+	<!-- 触摸屏误差范围设定 -->
+	<!--<touchRangeFixed>5</touchRangeFixed>-->
+	<!-- 引入需要的库 -->
+	<libs>
+		<import>plugins/navigationManagers/NavigationManagers.swf</import>
+		<!--<import>plugins/navigationControllerAdv/navigationControllerAdvPlugin.swf</import>-->
+		<!--<import>plugins/navigationManagers/FlipPlane.swf</import>-->
+		<!--<import>plugins/navigationManagers/APSwitch.swf</import>-->
+		<!--<import>plugins/navigationManagers/DissolvePlugin.swf</import>-->
+		<!--<import>plugins/navigationManagers/GridRaisePlugin.swf</import>-->
+		<import>plugins/buttonEffects/ButtonEffects.swf</import>
+		<import>plugins/buttonEffects/glowTween.swf</import>
+		<!--<import>plugins/canvasEffects/CanvasEffects.swf</import>-->
+		<!--<import>plugins/CustomTransition/CustomTransitionPlugin.swf</import>-->
+		<!--<import>plugins/aswing/ASWing.swf</import>-->
+		<!--<import>plugins/tweenEngine/TweenEngine.swf</import>-->
+		<import>plugins/script/ScriptPlugin.swf</import>
+		<!--<import>plugins/OSFlashVideoPlayer/OSFlashVideoPlayerPlugin.swf</import>-->
+		<import>plugins/Assets/Assets.swf</import>
+		<!--<import>plugins/Layout/Layout.swf</import>-->
+		<!--<import>plugins/Reflection/Reflection.swf</import>-->
+		<!--<import>plugins/PopWin/PopWinPlugin.swf</import>-->
+		<!--<import>plugins/as3sfxr/AS3sfxPlugin.swf</import>-->
+		<!--<import>plugins/loader/LoaderPlugin.swf</import>-->
+		<!--<import>plugins/module/ModulePlugin.swf</import>-->
+		<import>plugins/FlipBook/FlipBookPlugin.swf</import>
+		<!--<import>plugins/flatVideoPlayer/FlatVideoPlayerPlugin.swf</import>-->
+		<!--<import>plugins/fade/fadePlugin.swf</import>-->
+		<!--<import>plugins/display360/Display360Plugin.swf</import>-->
+		<!--<import>plugins/Panoramic/panoramicPlugin.swf</import>-->
+		<!--<import>plugins/svg/SVGPlugin.swf</import>-->
+		<!--<import>plugins/filter/BasicCanvasFilterPlugin.swf</import>-->
+		<!-- debug tools -->
+		<!--<import>plugins/SWFProfiler/SWFProfilerPlugin.swf</import>-->
+		<!--<import>plugins/SWFConsole/SWFConsolePlugin.swf</import>-->
+		<!--<import>plugins/tool/DragPlugin.swf</import>-->
+		<!--<import>plugins/as3Viewer/AS3ViewerPlugin.swf</import>-->
+		<!-- other -->
+		<!--<import>plugins/remotePlay/RemotePlayPlugin.swf</import>-->
+	</libs>
+	<!-- 指定自定义的Loading -->
+	<!--<loading>assets/system/loading/customLoading.swf</loading>-->
+	<!--<loading>assets/system/loading/loading.swf</loading>-->
+	<!--<loading>assets/system/loading/flatLoading/bin/flatLoading.swf</loading>-->
+</root>

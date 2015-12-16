@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SwfCanvas url="swf/exam.swf" preload="true">
+	<exams>
+		<exam>
+			<title>皇城相府位于山西省的</title>
+			<answer>运城市</answer>
+			<answer>太原市</answer>
+			<answer selected="true">晋城市阳城县北留镇</answer>
+		</exam>
+		<exam>
+			<title>康熙皇帝为皇城相府御笔赐名是</title>
+			<answer>午亭留村</answer>
+			<answer selected="true">午亭山村</answer>
+			<answer>午亭一村</answer>
+		</exam>
+		<exam>
+			<title>在哪部央视热播的电视剧中全面展示了皇城相府的景观风貌以及陈廷敬的政治才能？</title>
+			<answer selected="true">康熙王朝</answer>
+			<answer>雍正王朝</answer>
+			<answer>戏说乾隆</answer>
+		</exam>
+		<exam>
+			<title>皇城相府的建筑是什么风格？</title>
+			<answer>清代风格的城堡式建筑群</answer>
+			<answer>宫廷风格的民居式建筑</answer>
+			<answer selected="true">明清两代风格于一体的城堡式建筑群</answer>
+		</exam>
+		<exam>
+			<title>哪位皇帝把“陈敬”的名字改为“陈廷敬”？</title>
+			<answer selected="true">顺治</answer>
+			<answer>雍正</answer>
+			<answer>康熙</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬出生在一个什么样的家庭中？</title>
+			<answer>贫困家庭</answer>
+			<answer>小康之家</answer>
+			<answer selected="true">富甲一方</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬在皇城相府的出生地是——</title>
+			<answer>文熙堂</answer>
+			<answer selected="true">世德院</answer>
+			<answer>世德堂</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬九岁作的第一首诗是</title>
+			<answer>《读书录》</answer>
+			<answer>《河汾诗集》</answer>
+			<answer selected="true">《咏牡丹》</answer>
+		</exam>
+		<exam>
+			<title>哪一年陈廷敬赴京师会试，中三甲进士，开始了他的从政生涯？</title>
+			<answer>顺治四年</answer>
+			<answer>康熙四年</answer>
+			<answer selected="true">顺治十五年</answer>
+		</exam>
+		<exam>
+			<title>康熙十一年陈廷敬任职什么职位后开始有机会接近皇帝？</title>
+			<answer selected="true">日讲起居注官</answer>
+			<answer>国子监司业</answer>
+			<answer>礼部侍郎</answer>
+		</exam>
+		<exam>
+			<title>康熙十七年陈廷敬奉命入值哪里后使他获得了参与机密的权利，政治影响越来越大？</title>
+			<answer>军机处</answer>
+			<answer selected="true">南书房</answer>
+			<answer>翰林院</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬在做了翰林院的掌院学士、教习庶吉士后，品级是</title>
+			<answer>正一品</answer>
+			<answer selected="true">正三品</answer>
+			<answer>从一品</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬任户部尚书时积极推行对百姓的什么政策，受到了皇帝以及百姓一致肯定？</title>
+			<answer>重农轻商</answer>
+			<answer selected="true">因灾情豁免钱粮</answer>
+			<answer>免除兵役</answer>
+		</exam>
+		<exam>
+			<title>康熙二十四年，因贪风、腐败问题突出，陈廷敬向皇帝上《劝廉祛弊请敕详议定制疏》的意义是</title>
+			<answer selected="true">倡廉戒贪</answer>
+			<answer>勤俭为民</answer>
+			<answer>肃清贪官</answer>
+		</exam>
+		<exam>
+			<title>在陈廷敬的进言下，哪位贪腐的大臣遭到罢黜？</title>
+			<answer selected="true">明珠</answer>
+			<answer>索额图</answer>
+			<answer>和珅</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬上疏弹劾王继文拖欠国家军用钱粮90万两，当时王继文的职位是</title>
+			<answer>江南总督</answer>
+			<answer>云南藩王</answer>
+			<answer selected="true">云南巡抚</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬在什么时间升为文渊阁大学士？</title>
+			<answer>康熙二十三年</answer>
+			<answer selected="true">康熙四十二年</answer>
+			<answer>康熙二十四年</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬在哪里任职期间负责编纂了《康熙字典》？</title>
+			<answer selected="true">翰林院</answer>
+			<answer>礼部</answer>
+			<answer>户部</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬一品官服的补纹图案是什么飞禽？</title>
+			<answer selected="true">仙鹤</answer>
+			<answer>孔雀</answer>
+			<answer>麒麟</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬一品朝冠顶是什么宝石？</title>
+			<answer selected="true">东珠，衔红宝石</answer>
+			<answer>红宝石，衔小蓝宝石</answer>
+			<answer>蓝宝石</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬官职正一品时，一年的俸银是</title>
+			<answer>100两</answer>
+			<answer>1000两</answer>
+			<answer selected="true">180两</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬自己洁身自好，更注重教育家人后辈保持清廉之风，他告诫子孙</title>
+			<answer selected="true">清贫耐得始求官</answer>
+			<answer>菜根占得菜花春</answer>
+			<answer>租车借马半日忙</answer>
+		</exam>
+		<exam>
+			<title>康熙三十六年的六月十一日，康熙皇帝拿出一把扇子，要陈廷敬为他在扇面上题诗；画的是两只白鹭，一株青莲，扇面要表达的意思是</title>
+			<answer selected="true">路路清廉</answer>
+			<answer>飞黄腾达</answer>
+			<answer>勇于冒险</answer>
+		</exam>
+		<exam>
+			<title>表现陈廷敬在陪伴康熙皇帝南巡渡长江的画作的全名是</title>
+			<answer selected="true">康熙南巡图</answer>
+			<answer>清明上河图</answer>
+			<answer>皇帝巡游图</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬在多大年龄时当上文渊阁大学士？</title>
+			<answer>82岁</answer>
+			<answer selected="true">66岁</answer>
+			<answer>50岁</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬在京为官时最初住在哪里？</title>
+			<answer selected="true">宣武门东街</answer>
+			<answer>地安门大街</answer>
+			<answer>后海四合院</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬在多大年龄向康熙皇帝申请致仕？清廷告老还乡（卸任）？</title>
+			<answer selected="true">72岁</answer>
+			<answer>73岁</answer>
+			<answer>71岁</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬在清朝为官多少年？</title>
+			<answer>52年</answer>
+			<answer selected="true">53年</answer>
+			<answer>56年</answer>
+		</exam>
+		<exam>
+			<title>陈廷敬（身后）留下多少首诗？</title>
+			<answer>三百首</answer>
+			<answer selected="true">两千多首</answer>
+			<answer>一百首</answer>
+		</exam>
+		<exam>
+			<title>康熙五十一年，陈廷敬在大学士任上去世，康熙皇帝命谁送去挽诗悼念？</title>
+			<answer selected="true">皇三子</answer>
+			<answer>雍亲王</answer>
+			<answer>施琅</answer>
+		</exam>
+	</exams>
+</SwfCanvas>
